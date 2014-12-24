@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AIDLClient</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="bind_button_string">bind to the service</string>
+    <string name="unbind_button_string">unbind to the service</string>
+    <string name="hello_button_string">say hello</string>
+</resources>
