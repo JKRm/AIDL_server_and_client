@@ -19,9 +19,11 @@ public class AIDLServer extends Service {
         @Override
         public String introduce(Person person, ResultCallback result) throws RemoteException {
             String nice = "";
+            person.gender = "changed";
             try{
                 nice = "nice to meet you, " + person.name;
                 nice += " " + result.success("success");
+                result.response(person);
             }catch(Exception e){
                 nice += result.failure("error");
             }

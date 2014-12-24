@@ -13,7 +13,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.android.aidlserver.Person;
 import com.example.android.aidlserver.ResultCallback;
+import com.example.android.aidlserver.mAidlInterface;
 
 
 public class MainActivity extends Activity {
@@ -84,6 +86,11 @@ public class MainActivity extends Activity {
     }
 
     private final ResultCallback.Stub result = new ResultCallback.Stub() {
+        @Override
+        public void response(Person person) throws RemoteException {
+            Toast.makeText(MainActivity.this, person.gender, Toast.LENGTH_LONG).show();
+        }
+
         @Override
         public String success(String result) throws RemoteException {
             Log.i(TAG, result);

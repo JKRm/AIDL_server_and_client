@@ -1,4 +1,4 @@
-package com.example.android.aidltestclient;
+package com.example.android.aidlserver;
 
 import android.os.Parcel;
 import android.os.Parcelable;
