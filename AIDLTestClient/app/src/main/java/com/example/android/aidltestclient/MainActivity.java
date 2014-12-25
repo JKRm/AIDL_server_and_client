@@ -53,6 +53,8 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent("android.intent.action.AIDLService");
+                //for android 5.0 and later, service intent must be explicit
+                intent.setPackage("com.example.android.aidlserver");
                 bindService(intent, conn, Context.BIND_AUTO_CREATE);
                 unbindButton.setEnabled(true);
                 helloButton.setEnabled(true);
